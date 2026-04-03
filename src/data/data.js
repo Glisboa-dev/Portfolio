@@ -28,7 +28,7 @@ export const dict = {
         {
           id: "Networking",
           title: "Networking",
-          items: ["Wireshark", "TCP/IP", "DNS", "HTTP"],
+          items: ["Wireshark"],
         },
         {
           id: "Security Tools",
