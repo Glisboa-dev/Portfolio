@@ -15,6 +15,34 @@ const icons = {
   ),
 };
 
+const statusColors = {
+  "In Progress": {
+    accent: "from-yellow-400/20 to-yellow-500/5",
+    border: "border-yellow-400/20",
+    text: "text-yellow-300",
+  },
+  "Em Progresso": {
+    accent: "from-yellow-400/20 to-yellow-500/5",
+    border: "border-yellow-400/20",
+    text: "text-yellow-300",
+  },
+  "Completed": {
+    accent: "from-green-400/20 to-green-500/5",
+    border: "border-green-400/20",
+    text: "text-green-300",
+  },
+  "Concluído": {
+    accent: "from-green-400/20 to-green-500/5",
+    border: "border-green-400/20",
+    text: "text-green-300",
+  },
+  default: {
+    accent: "from-cyan-400/20 to-cyan-500/5",
+    border: "border-cyan-400/20",
+    text: "text-cyan-300",
+  }
+};
+
 function Projects() {
   const { language } = useLanguage();
   const { projects } = dict[language];
@@ -32,27 +60,28 @@ function Projects() {
         <div className="grid gap-6 md:grid-cols-3">
           {projects.items.map((project) => {
             const Icon = icons[project.status] || icons["coming soon"];
+            const colors = statusColors[project.status] || statusColors.default;
 
             return (
               <article
                 key={project.title}
-                className={`group relative overflow-hidden rounded-3xl border ${project.border} bg-white/3 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/5`}
+                className={`group relative overflow-hidden rounded-3xl border ${colors.border} bg-white/3 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/5`}
               >
                 {/* Hover gradient */}
                 <div
-                  className={`absolute inset-0 bg-linear-to-br ${project.accent} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+                  className={`absolute inset-0 bg-linear-to-br ${colors.accent} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
                 />
 
                 <div className="relative flex h-full flex-col justify-between gap-8">
                   {/* Top */}
                   <div className="flex items-start justify-between">
                     <span
-                      className={`inline-flex items-center rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.2em] ${project.text} border-current/20 bg-black/20`}
+                      className={`inline-flex items-center rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.2em] ${colors.text} border-current/20 bg-black/20`}
                     >
                       {project.status}
                     </span>
 
-                    <div className={`opacity-60 ${project.text}`}>
+                    <div className={`opacity-60 ${colors.text}`}>
                       {Icon}
                     </div>
                   </div>

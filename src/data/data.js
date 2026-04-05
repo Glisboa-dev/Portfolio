@@ -46,11 +46,11 @@ export const dict = {
       sectionTitle: "Projects",
       items: [
         {
-          status: "sample",
-          title: "SOC Detection Lab",
-          description: "A home lab focused on log ingestion, alert triage, and detection rules using Windows Event Logs, Sysmon, and a SIEM.",
-          tags: ["Splunk", "Sysmon", "Windows Logs"],
-          link: "#",
+          status: "In Progress",
+          title: "SOC-Java",
+          description: "Java-based SOC pipeline that ingests, parses, normalizes, and analyzes Windows and Linux logs to detect security events and generate alerts.",
+          tags: ["Java", "Windows Logs", "Linux Logs", "SIEM"],
+          link: "https://github.com/Glisboa-dev/SOC-Java",
           accent: "from-cyan-400/20 to-cyan-500/5",
           border: "border-cyan-400/20",
           text: "text-cyan-300",
@@ -176,11 +176,11 @@ export const dict = {
       sectionTitle: "Projetos",
       items: [
         {
-          status: "exemplo",
-          title: "Laboratório de Detecção SOC",
-          description: "Um laboratório doméstico focado em ingestão de logs, triagem de alertas e regras de detecção usando Logs de Eventos do Windows, Sysmon e um SIEM.",
-          tags: ["Splunk", "Sysmon", "Logs do Windows"],
-          link: "#",
+          status: "Em Progresso",
+          title: "SOC-Java",
+          description: "Pipeline SOC baseado em Java que ingere, processa, normaliza e analisa logs do Windows e Linux para detectar eventos de segurança e gerar alertas.",
+          tags: ["Java", "Logs do Windows", "Logs do Linux", "SIEM"],
+          link: "https://github.com/Glisboa-dev/SOC-Java",
           accent: "from-cyan-400/20 to-cyan-500/5",
           border: "border-cyan-400/20",
           text: "text-cyan-300",
