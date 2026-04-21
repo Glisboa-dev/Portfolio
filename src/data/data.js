@@ -44,18 +44,8 @@ export const dict = {
     },
     projects: {
       sectionTitle: "Projects",
-      items: [
-        {
-          status: "In Progress",
-          title: "SOC-Java",
-          description: "Java-based SOC pipeline that ingests, parses, normalizes, and analyzes Windows and Linux logs to detect security events and generate alerts.",
-          tags: ["Java", "Windows Logs", "Linux Logs", "SIEM"],
-          link: "https://github.com/Glisboa-dev/SOC-Java",
-          accent: "from-cyan-400/20 to-cyan-500/5",
-          border: "border-cyan-400/20",
-          text: "text-cyan-300",
-        },
-      ]
+      emptyState: "Building...",
+      items: []
     },
     certifications: {
       sectionTitle: "Certifications & Training",
@@ -98,7 +88,7 @@ export const dict = {
       items: [
         {
           role: "Bachelor's in Computer Science",
-          company:"Universidade Cidade de São Paulo",
+          company: "Universidade Cidade de São Paulo",
           period: "3 years",
           startDate: "2023 - Present",
           status: "ongoing",
@@ -174,18 +164,8 @@ export const dict = {
     },
     projects: {
       sectionTitle: "Projetos",
-      items: [
-        {
-          status: "Em Progresso",
-          title: "SOC-Java",
-          description: "Pipeline SOC baseado em Java que ingere, processa, normaliza e analisa logs do Windows e Linux para detectar eventos de segurança e gerar alertas.",
-          tags: ["Java", "Logs do Windows", "Logs do Linux", "SIEM"],
-          link: "https://github.com/Glisboa-dev/SOC-Java",
-          accent: "from-cyan-400/20 to-cyan-500/5",
-          border: "border-cyan-400/20",
-          text: "text-cyan-300",
-        },
-      ]
+      emptyState: "Construindo...",
+      items: []
     },
     certifications: {
       sectionTitle: "Certificações e Treinamento",
@@ -228,7 +208,7 @@ export const dict = {
       items: [
         {
           role: "Bacharelado em Ciência da Computação",
-          company:"Universidade Cidade de São Paulo",
+          company: "Universidade Cidade de São Paulo",
           period: "3 anos",
           startDate: "2023 - Presente",
           status: "Em andamento",

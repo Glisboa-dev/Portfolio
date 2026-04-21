@@ -57,7 +57,8 @@ function Projects() {
           </span>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        {projects.items && projects.items.length > 0 && projects.items[0].title ? (
+          <div className="grid gap-6 md:grid-cols-3">
           {projects.items.map((project) => {
             const Icon = icons[project.status] || icons["coming soon"];
             const colors = statusColors[project.status] || statusColors.default;
@@ -126,7 +127,20 @@ function Projects() {
               </article>
             );
           })}
-        </div>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-20 px-6 mt-4 rounded-3xl border border-white/5 bg-white/3 shadow-[0_10px_40px_rgba(0,0,0,0.25)]">
+            <div className="mb-4 opacity-50 text-white scale-150">
+              {icons["coming soon"]}
+            </div>
+            <h3 className="text-xl font-semibold tracking-tight text-white mb-2">
+              {projects.emptyState || "Building..."}
+            </h3>
+            <p className="text-sm text-slate-400 text-center max-w-md">
+              {language === 'pt' ? 'Novos projetos estão atualmente em desenvolvimento. Volte em breve!' : 'New projects are currently under development. Check back soon!'}
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
